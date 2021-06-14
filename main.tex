@@ -1,106 +1,23 @@
 \documentclass[10pt,a4paper]{cv}
-\geometry{left=1cm,right=11.2cm,marginparwidth=9cm,marginparsep=1.2cm,top=1cm,bottom=1cm}
-
-\usepackage[utf8]{inputenc}
-\usepackage[T1]{fontenc}
-\usepackage[default]{lato}
-\usepackage{hyperref}
-
-\definecolor{VividPurple}{HTML}{0085c3}
-\definecolor{SlateGrey}{HTML}{2E2E2E}
-\definecolor{LightGrey}{HTML}{666666}
-\colorlet{heading}{VividPurple}
-\colorlet{accent}{VividPurple}
-\colorlet{emphasis}{SlateGrey}
-\colorlet{body}{LightGrey}
-
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    linkcolor={VividPurple},
-    citecolor={VividPurple},
-    urlcolor={VividPurple}
-}
-
-
-% itemize and rating marker for \cvskill 
-\renewcommand{\itemmarker}{{\small\textbullet}}
-\renewcommand{\ratingmarker}{\faCircle}
-
-
-%\usepackage{hyperref}
+\input{preamble}
 
 \begin{document}
 %
 \name{Alexandr Galayda}
 \tagline{Curriculum Vitae}
-%\photo{3.5cm}{face}
+\photo{3.5cm}{face}
 %
-\personalinfo{%
-  \begin{minipage}{4cm}
-	\email{\href{mailto:alexgalayda@gmail.com}{\textcolor{SlateGrey}{alexgalayda@gmail.com}}}
-
-	\github{\href{https://github.com/alexgalayda}{\textcolor{SlateGrey}{github.com/alexgalayda}}}
-
-	\github{\href{https://gitlab.com/alexgalayda}{\textcolor{SlateGrey}{gitlab.com/alexgalayda}}}
-   
-   \end{minipage}%
-   \hfill%
-   \begin{minipage}{5.5cm}
-   
-   \phone{+7-916-395-20-46}
-   \location{Moscow, Russia}
-  \end{minipage}
-}
+\input{inc/personalinfo}
 
 \begin{adjustwidth}{}{-10cm}
 \makecvheader
 \end{adjustwidth}
 
-\cvsection[page1sidebar]{work experience}
+\cvsection[main2]{work experience}
+\input{inc/work}
 
-% MIL
-\cvevent{\textbf{Data Scientist (Algorithm Research Developer)}}{\href{https://mipt.ru/}{Moscow Institute of Physics and Technology (MIPT DREC)}}{11.18 -- present}{MIPT, Dolgoprudny, Russia}
-Research developer in data science. Developer of computer vision systems based on deep learning and classical algorithms.
-
-Tasks:
-\begin{itemize}
-	\item Developed a system for geo-referencing a series of images for the project.
-	\item Developed a system for automatic detection of anomalies based on drone survey data.
-	\item Development of a filter for infrared videos based on L0-regularization
-	\item Development of a docker workplace for the needs of the laboratory
-\end{itemize}
-
-%\cvevent{\textbf{Risk analyst}}{\href{www.tinkoff.ru}{Tinkoff Bank}}{08.18 -- 11.18}{Moscow, Russia}
-%
-%Risk analysis, building a scoring model of insurance
-
-\divider
-
-\cvevent{\textbf{Olympiad mathematics teacher}}{\href{https://sch1298sz.mskobr.ru/\#/}{School 1298 Kurkino}}{02.18 -- 06.18}{Khimki, Russia}
-Courses in olympiad mathematics for high school students
-
-\divider
-
-\cvsection{Achievements}
-
-\cvsubsection{International Forum \href{https://www.rusarmyexpo.ru/}{<<Army 2019>>}}
-Report <<Overview of the methods of formation and various methods of expanding the training sample
-artificial neural networks>>
-
-\cvsubsection{Abramov's scholarship for excellent progress in university in 2015-2016}
-
-% Relevant Courses ==============================================
-
-\cvsection{Relevant courses}
-\cvsubsection{Linux operating system and Linux servers}{by M.N.Shteinberg, Head of the Laboratory of Computer and Internet Technologies, \href{http://geo.mipt.ru/}{SDMGP}, MIPT}
-
-\cvsubsection{Machine Learning and Data Analysis}{
-	on \href{https://ru.coursera.org/specializations/machine-learning-data-analysis}{Coursera by MIPT \& Yandex}}
-
-\cvsubsection{Introduction to Git and GitHub}
-on
-\href{https://www.coursera.org/learn/introduction-git-github}{Coursera by Google}
+\input{inc/achievements}
+\input{inc/courses}
 
 \clearpage
 \end{document}
